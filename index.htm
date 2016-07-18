@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Ciklum task</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- Nav -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">WebSiteName</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Store <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a tabindex="-1" href="#">Store home</a></li>
+							<li class="dropdown-submenu"><a tabindex="-1" class="navbar_submenu" href="#">Devices <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a tabindex="-1" href="#">PCs & tablets</a></li>
+									<li><a tabindex="-1" href="#">X box</a></li>
+									<li><a tabindex="-1" href="#">Virtual reality</a></li>
+									<li><a tabindex="-1" href="#">Accessorizes</a></li>
+								</ul>
+							</li>
+							
+							<li class="dropdown-submenu"><a class="navbar_submenu" href="#">Software <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a tabindex="-1" href="#">Office</a></li>
+									<li><a tabindex="-1" href="#">Windows</a></li>
+									<li><a tabindex="-1" href="#">Additional software</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu"><a class="navbar_submenu" href="#">Apps <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a tabindex="-1" href="#">All app</a></li>
+									<li><a tabindex="-1" href="#">Windows app</a></li>
+									<li><a tabindex="-1" href="#">Windows phone app</a></li>
+								</ul>
+							</li>
+							<li><a tabindex="-1" href="#">Games</a></li>
+							<li><a tabindex="-1" href="#">Entertaiment</a></li>
+							<li><a tabindex="-1" href="#">Business and education</a></li>
+							<li><a tabindex="-1" href="#">Sale</a></li>
+							<li><a tabindex="-1" href="#">Find a store</a></li>
+							<li><a tabindex="-1" href="#">Gift cards</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a tabindex="-1" href="#">Software & devices</a></li>
+							<li><a tabindex="-1" href="#">Devices & Xbox</a></li>
+							<li><a tabindex="-1" href="#">For business</a></li>
+							<li><a tabindex="-1" href="#">For developers and IT pros</a></li>
+							<li><a tabindex="-1" href="#">For students and educators</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Support</a></li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart <span class="badge">0</span></a></li>
+					<li><a href="#" id="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group" style="display:inline;">
+						<div class="input-group">
+							<input class="form-control" type="text" placeholder="Search">
+							<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<!-- Modal -->
+	<div class="modal fade" id="modal" role="dialog">
+		<div class="modal-dialog">
+		<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" style="padding:35px 50px;">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+				</div>
+				<div class="modal-body" style="padding:40px 50px;">
+					<form role="form">
+						<div class="form-group">
+						<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+						<input type="text" class="form-control" id="usrname" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+							<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+							<input type="text" class="form-control" id="psw" placeholder="Enter password">
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" value="" checked>Remember me</label>
+						</div>
+						<button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+					<p>Not a member? <a href="#">Sign Up</a></p>
+					<p>Forgot <a href="#">Password?</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Section similar to Dropbox for business -->
+	<div class="container hero">
+		<section class="hero-subline hero-female">
+			<div class="hero_background-container hero_background-container-female"></div>
+			<div class="top-section">
+				<div class="top-section_container">
+					<h1 class="hero_header">Lorem ipsum</h1>
+					<h2 class="hero_sub-header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h2>
+					<div class="try-business-cta">
+						<a class="try-business-cta_button" href="#">Download a trial version</a>
+						<span class="try-business-cta_footer no-break"> or <a href="#">Buy it now</a></span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<!-- Carousel -->
+	<div id="carousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel" data-slide-to="1"></li>
+			<li data-target="#carousel" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="images/img0.jpg" alt="">
+				<div class="carousel-caption">
+					<h3>Lorem ipsum</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="images/img1.jpg" alt="">
+				<div class="carousel-caption">
+					<h3>Lorem ipsum</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="images/img5.jpg" alt="">
+				<div class="carousel-caption">
+					<h3>Lorem ipsum</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	
+	
+	<div class="container text-center">
+		<h3>Our company</h3>
+		<h4><em>Lorem ipsum dolor sit amet</em></h4>
+		<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h5>
+		<br>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="plans-table text-left">
+					<header class="plans-table_header">
+						<h2 class="plans-table_title">
+							<span class="plans-table_plan-name">Pro</span>
+							<span class="plans-table_plan-subhead">for individuals</span>
+						</h2>
+					</header>
+					<section class="plans-table_content">
+						<div class="plans-table_pricing">
+							<span class="plans-table_price-number">9,99 $</span>
+							<span class="plans-table_price-sub">per user per month</span>
+						</div>
+						<div class="plans-table-description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p></div>
+						<div class="plans-table_cta-holder">
+							<a href="#demo1" type="button" class="plans-table_cta" data-toggle="collapse">more...</a>
+							<br>
+							<div id="demo1" class="collapse">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+					<div class="col-sm-4">
+				<div class="plans-table plans-table_plan-primary text-left">
+					<header class="plans-table_header">
+						<h2 class="plans-table_title">
+							<span class="plans-table_plan-name">Business</span>
+							<span class="plans-table_plan-subhead">for working groups</span>
+						</h2>
+					</header>
+					<section class="plans-table_content">
+						<div class="plans-table_pricing">
+							<span class="plans-table_price-number">15 $</span>
+							<span class="plans-table_price-sub">per user per month</span>
+						</div>
+						<div class="plans-table-description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p></div>
+						<div class="plans-table_cta-holder">
+							<a href="#demo2" type="button" class="plans-table_cta" data-toggle="collapse">Try free version</a>
+							<span class="plans-table_purchase-now"> or <a href="#">Buy it now</a></span>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="plans-table text-left">
+					<header class="plans-table_header">
+						<h2 class="plans-table_title">
+							<span class="plans-table_plan-name">Enterprise</span>
+							<span class="plans-table_plan-subhead">for large organizations</span>
+						</h2>
+					</header>
+					<section class="plans-table_content">
+						<div class="plans-table_pricing plans-table_pricing-contact-us">
+							<span class="plans-table_price-contact-us">Contact us</span>
+						</div>
+						<div class="plans-table-description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p></div>
+						<div class="plans-table_cta-holder">
+							<a href="#" type="button" class="plans-table_cta" data-toggle="collapse">Contact us</a>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<div class="plans-features-table text-left">
+			<div class="row">
+				<div class="col-sm-4 bordered">
+					<ul class="plans-features-table_list col-sm-4">
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-strikethrough">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-strikethrough">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-strikethrough">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-strikethrough">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+					</ul>
+				</div>
+				<div class="col-sm-4 bordered">
+					<ul class="plans-features-table_list col-sm-4">
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-strikethrough">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-strikethrough">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-strikethrough">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+					</ul>
+				</div>
+				<div class="col-sm-4 bordered">
+					<ul class="plans-features-table_list">
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+						<li class="list-item-check">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row business-faq">
+			<h3 class="primary-header">Frequent questions</h3>
+			<div class="col-sm-6 text-left">
+				<div class="business-faq-list">
+					<dl class="business-faq-list_items">
+						<div class="business-faq-list_column">
+							<div class="business-faq-list_item">
+								<dt><h4 class="business-faq-list_item_question">What is user</h4></dt>
+								<dd class="business-faq-list_item_answer">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</dd>
+							</div>
+							<div class="business-faq-list_item">
+								<dt><h4 class="business-faq-list_item_question">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4></dt>
+								<dd class="business-faq-list_item_answer">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</dd>
+							</div>
+							<div class="business-faq-list_item">
+								<dt><h4 class="business-faq-list_item_question">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4></dt>
+								<dd class="business-faq-list_item_answer">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</dd>
+							</div>
+						</div>
+					</dl>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 text-left">
+				<div class="business-faq-list">
+					<dl class="business-faq-list_items">
+						<div class="business-faq-list_column">
+							<div class="business-faq-list_item">
+								<dt><h4 class="business-faq-list_item_question">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h4></dt>
+								<dd class="business-faq-list_item_answer">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</dd>
+							</div>
+							<div class="business-faq-list_item">
+								<dt><h4 class="business-faq-list_item_question">Lorem ipsum dolor sit amet</h4></dt>
+								<dd class="business-faq-list_item_answer">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. <a href="#">Nemo enim ipsam</a> voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt <a href="#">eaque ipsa quae</a></dd>
+							</div>
+							<div class="business-faq-list_item">
+								<dt><h4 class="business-faq-list_item_question">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4></dt>
+								<dd class="business-faq-list_item_answer">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</dd>
+							</div>
+						</div>
+					</dl>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<!-- Form-inline similar to inVision -->
+	<div class="signup-form-wrapper dark-blue footer-signup">
+		<div class="inside text-center">
+			<h2>Join over 2 million users already using our products</h2>
+		</div>
+		<form class="signup_form form-inline" id="signup_form" role="form">
+			<p>
+				<label for="signup_name" style="opacity: 1;">Your name
+				</label><span class="glyphicon glyphicon-user"></span>
+				<input type="text" id="signup_name" class="form_control" name="name" value="">
+				<label class="error" style="display: inline;" for="signup_name">This field is required</label>
+			</p>
+			<p>
+				<label for="signup_email" style="opacity: 1; display: block;">Email adress
+				</label><span class="glyphicon glyphicon-envelope"></span>
+				<input type="text" id="signup_email" class="form_control" name="email" value="">
+				<label class="error" style="display: inline;" for="signup_email">This field is required</label>
+			</p>
+			<p>
+				<label for="signup_pwd" style="opacity: 1; display: block;">Create a password
+				</label><span class="glyphicon glyphicon-lock"></span>
+				<input type="password" id="signup_pwd" class="form_control" name="password" value="">
+				<label class="error" style="display: inline;" for="signup_pwd">This field is required</label>
+			</p>
+			<p class="button">
+				<button type="submit" class="btn_submit">Get started - free forever</button>
+			</p>
+		</form>
+		<p class="terms">
+				By clicking "Get started - Free forever!" I agree...<a href="#">Terms of service</a>
+		</p>
+	</div>
+	
+	<!--Section similar to Oculus-->
+	<div class="features-wrapper">
+		<ul class="features-list">
+			<li class="features-list-item">
+				<a class="features-list-item-link" href="#">
+					<div class="features-img-block" style="background-image: url('images/eve-valkyrie.jpg')"></div>
+					<div class="features-content-block">
+						<h4 class="features-content-description">Featured content</h4>
+						<h3 class="features-content-name">Eve: Valkyrie</h3>
+					</div>
+				</a>
+			</li>
+
+			<li class="features-list-item">
+				<a class="features-list-item-link" href="#">
+					<div class="features-img-block" style="background-image: url('images/luckys-tale.jpg')"></div>
+					<div class="features-content-block">
+						<h4 class="features-content-description">Included with all rift purchases</h4>
+						<h3 class="features-content-name">Lucky's tale</h3>
+					</div>
+				</a>
+			</li>
+
+			<li class="features-list-item">
+				<a class="features-list-item-link" href="#">
+					<div class="features-img-block" style="background-image: url('images/stage-image.jpg')"></div>
+					<div class="features-content-block">
+						<h4 class="features-content-description">Featured story</h4>
+						<h3 class="features-content-name">Announcing Company's connect 3 and Rift aviability update</h3>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+<!-- Footer similar to Apple  -->
+	<footer id="page-footer" role="contentInfo" arialabelledby="footer-label">
+		<div class="footer-content">
+			<h2 id="footer-label" class="footer-label">Footer</h2>
+			<nav class="footer-directory with-5-columns" aria-label="directory" role="navigation">
+				<div class="footer-directory-column">
+					<input id="footer-directory-column-section-state-products" class="footer-directory-column-section-state" type="checkbox">
+					<div class="footer-directory-column-section">
+						<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-products">
+							<h3 class="footer-directory-column-section-title">Shop and learn</h3>
+						</label>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open" href="#">
+							<span class="footer-directory-column-section-anchor-label">Open menu</span>
+						</a>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close" href="#">
+							<span class="footer-directory-column-section-anchor-label">Close menu</span>
+						</a>
+						<ul class="footer-directory-column-section-list">
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="footer-directory-column">
+					<input id="footer-directory-column-section-state-storeservices" class="footer-directory-column-section-state" type="checkbox">
+					<div class="footer-directory-column-section">
+						<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-storeservices">
+							<h3 class="footer-directory-column-section-title">Store</h3>
+						</label>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open" href="#">
+							<span class="footer-directory-column-section-anchor-label">Open menu</span>
+						</a>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close" href="#">
+							<span class="footer-directory-column-section-anchor-label">Close menu</span>
+						</a>
+						<ul class="footer-directory-column-section-list">
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-directory-column">
+					<input type="footer-directory-column-section-state-education" class="footer-directory-column-section-state" type="checkbox">
+					<div class="footer-directory-column-section">
+						<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-education">
+							<h3 class="footer-directory-column-section-title">For education</h3>
+						</label>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open" href="#">
+							<span class="footer-directory-column-section-anchor-label">Open menu</span>
+						</a>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close" href="#">
+							<span class="footer-directory-column-section-anchor-label">Close menu</span>
+						</a>
+						<ul class="footer-directory-column-section-list">
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+						</ul>
+					</div>
+					<input id="footer-directory-column-section-state-business" class="footer-directory-column-section-state" type="checkbox">
+					<div class="footer-directory-column-section">
+						<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-business">
+							<h3 class="footer-directory-column-section-title">For Business</h3>
+						</label>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open" href="#">
+							<span class="footer-directory-column-section-anchor-label">Open menu</span>
+						</a>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close" href="#">
+							<span class="footer-directory-column-section-anchor-label">Close menu</span>
+						</a>
+						<ul class="footer-directory-column-section-list">
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-directory-column">
+					<input type="footer-directory-column-section-state-accounts" class="footer-directory-column-section-state" type="checkbox">
+					<div class="footer-directory-column-section">
+						<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-accounts">
+							<h3 class="footer-directory-column-section-title">Account</h3>
+						</label>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open" href="#">
+							<span class="footer-directory-column-section-anchor-label">Open menu</span>
+						</a>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close" href="#">
+							<span class="footer-directory-column-section-anchor-label">Close menu</span>
+						</a>
+						<ul class="footer-directory-column-section-list">
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+						</ul>
+					</div>
+					<input type="footer-directory-column-section-state-responsibility" class="footer-directory-column-section-state" type="checkbox">
+					<div class="footer-directory-column-section">
+						<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-responsibility">
+							<h3 class="footer-directory-column-section-title">Values</h3>
+						</label>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open" href="#">
+							<span class="footer-directory-column-section-anchor-label">Open menu</span>
+						</a>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close" href="#">
+							<span class="footer-directory-column-section-anchor-label">Close menu</span>
+						</a>
+						<ul class="footer-directory-column-section-list">
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-directory-column">
+					<input type="footer-directory-column-section-state-about" class="footer-directory-column-section-state" type="checkbox">
+					<div class="footer-directory-column-section">
+						<label class="footer-directory-column-section-label" for="footer-directory-column-section-state-about">
+							<h3 class="footer-directory-column-section-title">About</h3>
+						</label>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-open" href="#">
+							<span class="footer-directory-column-section-anchor-label">Open menu</span>
+						</a>
+						<a class="footer-directory-column-section-anchor footer-directory-column-section-anchor-close" href="#">
+							<span class="footer-directory-column-section-anchor-label">Close menu</span>
+						</a>
+						<ul class="footer-directory-column-section-list">
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+							<li class="footer-directory-column-section-item">
+								<a class="footer-directory-column-section-link" href="#">Lorem ispum</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+	<!-- Lower footer -->
+			<div class="lower-footer">
+				<div class="lower-footer-shop"> More ways to shop. Visit an <a href="#">Store</a>
+					<span class="nowrap">call 1-0-777 - Company's Store, or <a href="#">Find a reseller</a></span>
+				</div>
+				<div class="lower-footer-locale">
+					<a href="#" class="lower-footer-locale-link">Ukraine</a>
+				</div>
+				<div class="lower-footer-legal">
+					<div class="lower-footer-legal-copyright">Copyright &copy; 2016 Nataliia Zhurbenko. All rights reserved.
+					</div>
+					<div class="lower-footer-legal-links">
+						<a class="lower-footer-legal-link">Privacy policy</a>
+						<a class="lower-footer-legal-link">Terms of use</a>
+						<a class="lower-footer-legal-link">Sales and refunds</a>
+						<a class="lower-footer-legal-link">Legal</a>
+						<a class="lower-footer-legal-link">Site map</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/functions.js"></script>
+</body>
+</html>
